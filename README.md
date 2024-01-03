@@ -44,7 +44,7 @@ Once the application is running, navigate to the home page to see the list of an
 
 ## Roadmap
 
-See the [open issues](https://github.com/roesorcerer/AnimeRatings.Website/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/roesorcerer/AnimeRatingsWeb/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
