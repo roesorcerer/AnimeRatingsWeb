@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
+    <Controller_SelectedScaffolderID>RazorComponentScaffolder</Controller_SelectedScaffolderID>
+    <Controller_SelectedScaffolderCategoryPath>root/Common/RazorComponent</Controller_SelectedScaffolderCategoryPath>
+    <NameOfLastUsedPublishProfile>C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\Properties\PublishProfiles\AnimeRatingWinter2023 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

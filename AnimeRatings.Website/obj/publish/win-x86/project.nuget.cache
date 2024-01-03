@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TKeqme1bYQO/gJi+mouYcCo2OkWo51E65CelnZ7t+HE00BrMBEVkk8gaY4mEh97NyRPcjg2TeHYa6frzgcI/ig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Me\\source\\repos\\AnimeRatings.Website\\AnimeRatings.Website\\AnimeRatings.Website.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Me\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.0\\microsoft.netcore.app.runtime.win-x86.8.0.0.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.0\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.0.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.0\\microsoft.aspnetcore.app.runtime.win-x86.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

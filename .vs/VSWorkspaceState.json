@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AnimeRatings.Website",
+    "\\AnimeRatings.Website\\Components",
+    "\\AnimeRatings.Website\\Controller",
+    "\\AnimeRatings.Website\\Models",
+    "\\AnimeRatings.Website\\Pages",
+    "\\AnimeRatings.Website\\Properties",
+    "\\AnimeRatings.Website\\Services",
+    "\\AnimeRatings.Website\\wwwroot"
+  ],
+  "SelectedNode": "\\AnimeRatings.Website\\Pages\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}
