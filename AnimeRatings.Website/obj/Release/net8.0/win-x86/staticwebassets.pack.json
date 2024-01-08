@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Me\\source\\repos\\AnimeRatings.Website\\AnimeRatings.Website\\wwwroot\\data\\animes.json",
-      "PackagePath": "staticwebassets\\data\\animes.json"
-    },
-    {
       "Id": "C:\\Users\\Me\\source\\repos\\AnimeRatings.Website\\AnimeRatings.Website\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

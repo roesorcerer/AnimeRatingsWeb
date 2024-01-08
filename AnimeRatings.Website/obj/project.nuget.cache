@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BRMoDq/BjgX5MqRQq+nvg79O4+8G4RJausbUg5KyYlgkOaVbVzJVSfBVn9wyJgOi287fNcKRZegjfjJw+wt7Ug==",
+  "dgSpecHash": "phzLSPKHHjbGQ4ivxXr82u7B3Af7M4t7xYomQLRS1DPDBPrqxJFmP41Ph/z7/25YAk82ulY/pXCgt4+EtX5rcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Me\\source\\repos\\AnimeRatings.Website\\AnimeRatings.Website\\AnimeRatings.Website.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Me\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\azure.core\\1.36.0\\azure.core.1.36.0.nupkg.sha512",
     "C:\\Users\\Me\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.0.0\\azure.extensions.aspnetcore.configuration.secrets.1.0.0.nupkg.sha512",
-    "C:\\Users\\Me\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
-    "C:\\Users\\Me\\.nuget\\packages\\azure.security.keyvault.secrets\\4.0.1\\azure.security.keyvault.secrets.4.0.1.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\azure.identity\\1.10.4\\azure.identity.1.10.4.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\azure.security.keyvault.secrets\\4.5.0\\azure.security.keyvault.secrets.4.5.0.nupkg.sha512",
     "C:\\Users\\Me\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Me\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Me\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

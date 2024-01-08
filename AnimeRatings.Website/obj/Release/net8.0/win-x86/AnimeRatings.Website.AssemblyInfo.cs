@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimeRatings.Website")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59ef4bcea1bc7b2246e2595ab242f2a1f3d82daf")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimeRatings.Website")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimeRatings.Website")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

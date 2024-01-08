@@ -1,12 +1,12 @@
 {
   "dependencies": {
     "mssql1": {
-      "restored": true,
-      "restoreTime": "2023-12-28T00:14:02.8359212Z"
+      "restored": false,
+      "restoreTime": "2024-01-06T21:46:03.9013223Z"
     },
     "secrets1": {
-      "restored": true,
-      "restoreTime": "2023-12-28T00:13:35.766972Z"
+      "restored": false,
+      "restoreTime": "2024-01-06T21:46:03.9013223Z"
     }
   },
   "parameters": {
@@ -14,6 +14,11 @@
       "Name": "mssql1.subscriptionId",
       "Type": "subscription",
       "Value": "09047d06-2b47-4000-a4ac-abc206d36249"
+    },
+    "mssql1.resourceGroupLocation": {
+      "Name": "mssql1.resourceGroupLocation",
+      "Type": "location",
+      "Value": "eastus"
     },
     "secrets1.resourceGroupName": {
       "Name": "secrets1.resourceGroupName",
@@ -24,6 +29,11 @@
       "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
       "Value": "AnimeRatingsWebsite20231227153134ResourceGroup"
+    },
+    "secrets1.resourceGroupLocation": {
+      "Name": "secrets1.resourceGroupLocation",
+      "Type": "location",
+      "Value": "eastus"
     },
     "secrets1.subscriptionId": {
       "Name": "secrets1.subscriptionId",

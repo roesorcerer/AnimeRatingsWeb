@@ -1,43 +1,55 @@
-﻿@using Microsoft.AspNetCore.Components.Web
+﻿@page "/anime-list"
+@using Microsoft.AspNetCore.Components.Web
 @using AnimeRatings.Website.Services
 @using AnimeRatings.Website.Models
 @inject JsonFileAnimesService AnimesService
 
+<!-- Display the anime list in a card-columns layout -->
 <div class="card-columns">
-    @foreach (var anime in AnimesService.GetAnimes())
+    @if (Animes != null)
     {
-        <div class="card">
-            <div class="card-img" style="background-image: url('@anime.Image');"> 
-
+        <!-- Iterate over each anime and create a card for it -->
+        @foreach (var anime in Animes)
+        {
+            <div class="card">
+                <!-- Image of the anime displayed as a background image -->
+                <div class="card-img" style="background-image: url('@anime.Image');"></div>
+                <!-- Body of the card contains the anime title -->
+                <div class="card-body">
+                    <h5 class="card-title">@anime.Title</h5>
+                </div>
+                <!-- Footer of the card with a button to view more details -->
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <!-- Button triggers the display of the modal with more information -->
+                        <button @onclick="(e => SelectAnime(anime?.Id ?? string.Empty))"
+                                data-bs-toggle="modal" data-bs-target="#animeModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">@anime.Title</h5>
-            </div>        
-        <div class="card-footer">
-                <small class="text-muted">
-                <button @onclick="(e=> SelectAnime(anime?.Id ?? string.Empty))"
-                            data-bs-toggle="modal" data-bs-target="#animeModal" class="btn btn-primary">
-                        More Info
-                    </button>
-            </small>
-        </div>
-        </div>
+        }
     }
-        </div>
+</div>
 
-
-    <div class="modal fade" id="animeModal" tabindex="-1" role="dialog" aria-labelledby="animeTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+<!-- Modal dialog displayed when More Info is clicked -->
+<div class="modal fade" id="animeModal" tabindex="-1" role="dialog" aria-labelledby="animeTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <!-- Show the selected anime's details inside the modal -->
         @if (selectAnime != null)
         {
             <div class="modal-content">
                 <div class="modal-header">
+                    <!-- Title of the anime -->
                     <h5 class="modal-title" id="animeTitle">@selectAnime.Title</h5>
+                    <!-- Close button for the modal -->
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>              
-                <div class="modal-body">                    
+                </div>
+                <div class="modal-body">
+                    <!-- Card with the selected anime's image and description -->
                     <div class="card">
                         <div class="card-img" style="background-image: url('@selectAnime.Image');"></div>
                         <div class="card-body">
@@ -46,46 +58,57 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <!-- Display the rating or invite the user to be the first to rate -->
                     @if (voteCount == 0)
                     {
-                    <p>Be the first to rate this anime!</p>
+                        <p>Be the first to rate this anime!</p>
                     }
                     else
                     {
-                        <span>@currentRating.ToString("0.0")/5 (@voteCount @voteLabel)</span> <!-- Display the average rating out of 5 -->
+                        <!-- Show the current average rating -->
+                        <span>@currentRating.ToString("0.0")/5 (@voteCount @voteLabel)</span>
                     }
+                    <!-- Star icons for submitting a rating, filled or outlined based on the current rating -->
                     @for (int i = 1; i <= 5; i++)
                     {
                         var currentStar = i;
-                        <span class="@(i <= currentRating ? "fa fa-star checked" : "fa fa-star-o")" @onclick="(e => SubmitRating(currentStar))"></span>
+                        <span class="@(i <= currentRating ? "fa fa-star checked" : "fa fa-star-o")"
+                              @onclick="(e => SubmitRating(currentStar))"></span>
                     }
                 </div>
-            </div>          
+            </div>
         }
-     </div>
+    </div>
 </div>
 
+<!-- Link to the Font Awesome library for star icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-@code   
+@code
 {
+    // Nullable list to hold the anime data
+    List<Anime>? Animes;
+    // Nullable variable to hold the selected anime for details
     Anime? selectAnime;
-    string? selectAnimeId;
+    // Variables to track the current rating and number of votes
     double currentRating = 0;
     int voteCount = 0;
-    string? voteLabel;
+    string voteLabel = "";
 
-    void SelectAnime(string animeId)
+    // Method to select an anime and calculate its current rating
+    async Task SelectAnime(string animeId)
     {
-        selectAnimeId = animeId;
-        selectAnime = AnimesService.GetAnimes().FirstOrDefault(x => x.Id == animeId); 
-        //Console.WriteLine($"Selected Anime: {selectAnime.Title}");
-        //Console.WriteLine($"Image URL: {selectAnime.Image}");
-        GetCurrentRating();
+        if (Animes != null)
+        {
+            selectAnime = Animes.FirstOrDefault(x => x.Id == animeId);
+            if (selectAnime != null)
+            {
+                GetCurrentRating();
+            }
+        }
     }
 
-
-
+    // Method to calculate the current average rating
     void GetCurrentRating()
     {
         if (selectAnime?.Ratings == null || !selectAnime.Ratings.Any())
@@ -93,26 +116,33 @@
             currentRating = 0;
             voteCount = 0;
             voteLabel = "Votes";
-
         }
         else
         {
-            voteCount = selectAnime.Ratings.Length;
+            voteCount = selectAnime.Ratings.Count;
             currentRating = (double)selectAnime.Ratings.Sum() / voteCount;
             voteLabel = voteCount > 1 ? "Votes" : "Vote";
         }
-
-        StateHasChanged();
     }
 
-    void SubmitRating(int rating)
+    // Method to submit a rating and update the display
+    async Task SubmitRating(int rating)
     {
-        if (selectAnimeId != null)
+        if (selectAnime != null && Animes != null)
         {
-            AnimesService.AddRating(selectAnimeId, rating);
-            selectAnime = AnimesService.GetAnimes().First(x => x.Id == selectAnimeId); // Re-fetch the updated anime data
-            GetCurrentRating();
-            StateHasChanged();
+            await AnimesService.AddRatingAsync(selectAnime.Id, rating);
+            selectAnime = Animes.FirstOrDefault(x => x.Id == selectAnime.Id);
+            if (selectAnime != null)
+            {
+                GetCurrentRating();
+            }
         }
+    }
+
+    // Method called when the component is initialized to load anime data
+    protected override async Task OnInitializedAsync()
+    {
+        var animeList = await AnimesService.GetAnimesAsync();
+        Animes = animeList.ToList();
     }
 }

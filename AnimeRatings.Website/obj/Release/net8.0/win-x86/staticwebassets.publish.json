@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P7FiX2DTuxWu49zrnWMTgm6aj0wsPZu59n5z+v/uC4s=",
+  "Hash": "3877uNOhHYxpHvNGj8xksvYtBXvTElrWW/t8mdgCiXY=",
   "Source": "AnimeRatings.Website",
   "BasePath": "_content/AnimeRatings.Website",
   "Mode": "Default",
@@ -72,25 +72,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\Me\\source\\repos\\AnimeRatings.Website\\AnimeRatings.Website\\wwwroot\\data\\animes.json",
-      "SourceId": "AnimeRatings.Website",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Me\\source\\repos\\AnimeRatings.Website\\AnimeRatings.Website\\wwwroot\\",
-      "BasePath": "_content/AnimeRatings.Website",
-      "RelativePath": "data/animes.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\data\\animes.json"
     },
     {
       "Identity": "C:\\Users\\Me\\source\\repos\\AnimeRatings.Website\\AnimeRatings.Website\\wwwroot\\favicon.ico",

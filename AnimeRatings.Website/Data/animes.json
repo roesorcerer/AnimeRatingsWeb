@@ -1,35 +1,30 @@
+//Original JSON data. Migrated to SQL Database
 [
   {
     "Id": "fall-2023-frieren",
     "Studio": "Madhouse",
-    "img": "https://i.pinimg.com/originals/c1/3c/e2/c13ce2b24dbc267b8130228f7daacdd7.jpg",
+    "Image": "https://i.pinimg.com/originals/c1/3c/e2/c13ce2b24dbc267b8130228f7daacdd7.jpg",
     "Url": "https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end",
-    "Title": "Frieren: Beyond Journey\u0027s End",
+    "Title": "Frieren: Beyond Journey's End",
     "Description": "Lots of sad",
-    "Ratings": [
-      
-    ]
+    "Ratings": []
   },
   {
     "Id": "fall-2023-spyxfam",
     "Studio": "CloverWorks",
-    "img": "https://i.pinimg.com/originals/c9/89/f1/c989f1b1a9c4cd2075bcf9e314d3b46f.jpg",
+    "Image": "https://i.pinimg.com/originals/c9/89/f1/c989f1b1a9c4cd2075bcf9e314d3b46f.jpg",
     "Url": "https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end",
     "Title": "Spy x Family",
     "Description": "Family Fun",
-    "Ratings": [
-      
-    ]
+    "Ratings": []
   },
   {
     "Id": "fall-2023-shield-hero",
     "Studio": "Kinema Citrus",
-    "img": "https://i.pinimg.com/736x/27/2c/77/272c7755e6a1e332cf7d9e52907d0665.jpg",
+    "Image": "https://i.pinimg.com/736x/27/2c/77/272c7755e6a1e332cf7d9e52907d0665.jpg",
     "Url": "https://www.crunchyroll.com/series/G6W4QKX0R/the-rising-of-the-shield-hero",
     "Title": "The Rising of the Shield Hero",
     "Description": "Bad luck bears",
-    "Ratings": [
-     
-    ]
+    "Ratings": []
   }
 ]

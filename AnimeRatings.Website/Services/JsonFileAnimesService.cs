@@ -1,86 +1,63 @@
 ﻿using System.Text.Json;
 using AnimeRatings.Website.Models;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using AnimeRatings.Website.Data;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace AnimeRatings.Website.Services
 {
+    // This service class is responsible for data operations on Anime entities
     public class JsonFileAnimesService
     {
-        //taking the Json file information and passing to the webhost
-        public JsonFileAnimesService(IWebHostEnvironment webHostEnvironment)
+        private readonly ApplicationDbContext DbContext;
+
+        // Constructor injecting the database context to be used within this service
+        public JsonFileAnimesService(ApplicationDbContext dbContext)
         {
-            WebHostEnvironment = webHostEnvironment;
+            DbContext = dbContext;
         }
 
-        //
-        public IWebHostEnvironment WebHostEnvironment { get; }
-
-        //search for the animes database file with webhost in wwwroot
-        private string JsonFileName
+        // Asynchronously add a rating to an anime identified by its ID
+        public async Task AddRatingAsync(string animeId, int rating)
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "animes.json"); }
-        }
+            var anime = await DbContext.Animes.FindAsync(animeId);
+            if (anime != null)
+            {
+                // Initialize Ratings if null and add the new rating
+                anime.Ratings = anime.Ratings ?? new List<int>();
+                anime.Ratings.Add(rating);
 
-        //using IEnumerable for this instead of a list
-        public IEnumerable<Anime> GetAnimes()
-        {
-            try
-            {
-                using (var jsonFileReader = File.OpenText(JsonFileName))
-                {
-                    return JsonSerializer.Deserialize<Anime[]>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-                }
-            }
-            catch (Exception ex)
-            {
-                // Handle the exception here or rethrow it to be handled at a higher level
-                throw new Exception("Error occurred while reading the JSON file.", ex);
+                // Persist changes to the database
+                await DbContext.SaveChangesAsync();
             }
         }
 
-        public void AddRating(string animeId, int rating)
+        // Retrieve an anime by its ID asynchronously
+        public async Task<Anime> GetAnimeByIdAsync(string animeId)
         {
-            var animes = GetAnimes();
-            //quering the first animeId matches animeId
-            //var query =animes.First(x => x.Id == animeId);
-            //if query returns null 
-            if (animes.First(x => x.Id == animeId).Ratings == null)
-            {
-                animes.First(x => x.Id == animeId).Ratings = new int[] { rating };
-            }
-            //else add query to list
-            else
-            {
-                var ratings = animes.First(x => x.Id == animeId).Ratings?.ToList();
-                ratings?.Add(rating);
-                animes.First(x => x.Id == animeId).Ratings = ratings?.ToArray();
-            }
+            return await DbContext.Animes.FindAsync(animeId);
+        }
 
-            try
+        // Asynchronously add a review to an anime identified by its ID
+        public async Task AddReviewToAnimeAsync(string animeId, int rating)
+        {
+            var anime = await DbContext.Animes.FindAsync(animeId);
+            if (anime != null)
             {
-                using (var outputStream = File.OpenWrite(JsonFileName))
-                {
-                    JsonSerializer.Serialize<IEnumerable<Anime>>(
-                        new Utf8JsonWriter(outputStream, new JsonWriterOptions
-                        {
-                            SkipValidation = true,
-                            Indented = true
-                        }),
-                        animes
-                    );
-                }
+                // Initialize Ratings if null and add the new review rating
+                anime.Ratings = anime.Ratings ?? new List<int>();
+                anime.Ratings.Add(rating);
+
+                // Persist changes to the database
+                await DbContext.SaveChangesAsync();
             }
-            catch (Exception ex)
-            {
-                // Handle the exception here or rethrow it to be handled at a higher level
-                throw new Exception("Error occurred while writing to the JSON file.", ex);
-            }
+        }
+
+        // Asynchronously retrieve all animes from the database
+        public async Task<List<Anime>> GetAnimesAsync()
+        {
+            return await DbContext.Animes.ToListAsync();
         }
     }
 }
-
-

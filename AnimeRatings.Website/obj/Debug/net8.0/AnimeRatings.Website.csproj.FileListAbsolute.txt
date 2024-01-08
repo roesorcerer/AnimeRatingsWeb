@@ -1,5 +1,6 @@
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\bin\Debug\net8.0\appsettings.json
+C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\bin\Debug\net8.0\Data\animes.json
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\bin\Debug\net8.0\AnimeRatings.Website.staticwebassets.runtime.json
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\bin\Debug\net8.0\AnimeRatings.Website.exe
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\bin\Debug\net8.0\AnimeRatings.Website.deps.json
@@ -120,6 +121,7 @@ C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net8.0\AnimeRatings.Website.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net8.0\AnimeRatings.Website.RazorAssemblyInfo.cache
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net8.0\AnimeRatings.Website.RazorAssemblyInfo.cs
+C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net8.0\AnimeRatings.Website.sourcelink.json
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Me\source\repos\AnimeRatings.Website\AnimeRatings.Website\obj\Debug\net8.0\staticwebassets\msbuild.AnimeRatings.Website.Microsoft.AspNetCore.StaticWebAssets.props

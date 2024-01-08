@@ -17,9 +17,12 @@ namespace AnimeRatings.Website.Pages
 
         }        
         public JsonFileAnimesService AnimesService { get; }
-        public IEnumerable<Anime> Animes { get; private set; }
+        public IEnumerable<Anime> Animes { get; private set; } = new List<Anime>();
 
-        public void OnGet() => Animes = AnimesService.GetAnimes();
+        public async Task OnGet()
+        {
+            Animes = await AnimesService.GetAnimesAsync(); 
+        }
 
     }
 }
