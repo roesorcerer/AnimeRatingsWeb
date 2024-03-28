@@ -1,0 +1,8 @@
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.csproj.AssemblyReference.cache
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.AssemblyInfoInputs.cache
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.AssemblyInfo.cs
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.csproj.CoreCompileInputs.cache
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.MvcApplicationPartsAssemblyInfo.cache
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.RazorAssemblyInfo.cache
+D:\Coding\Websites\AnimeRateApp\AnimeRateApp\AnimeRateApp\obj\Debug\net8.0\AnimeRateApp.RazorAssemblyInfo.cs
