@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeRateApp", "AnimeRateApp\AnimeRateApp.csproj", "{4C57EFA7-909F-4410-A25D-2584306F6C59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeRateApp.Client", "AnimeRateApp.Client\AnimeRateApp.Client.csproj", "{B9C7EC16-49E1-4051-A911-E5E568A523D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C57EFA7-909F-4410-A25D-2584306F6C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C57EFA7-909F-4410-A25D-2584306F6C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C57EFA7-909F-4410-A25D-2584306F6C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C57EFA7-909F-4410-A25D-2584306F6C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C7EC16-49E1-4051-A911-E5E568A523D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C7EC16-49E1-4051-A911-E5E568A523D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C7EC16-49E1-4051-A911-E5E568A523D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C7EC16-49E1-4051-A911-E5E568A523D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F4D1E1C-3B21-410B-AC2C-0E33B9AC728F}
+	EndGlobalSection
+EndGlobal
